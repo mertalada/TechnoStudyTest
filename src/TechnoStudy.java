@@ -157,14 +157,14 @@ public class TechnoStudy {
         WebElement facebook=driver.findElement(By.xpath("//*[@href=\"https://www.facebook.com/technostudybootcamps\"]"));
         facebook.click();
 
-       // WebElement Instagram=driver.findElement(By.xpath("//*[@href='https://www.instagram.com/techno.study/']"));
-       // Instagram.click();
+        // WebElement Instagram=driver.findElement(By.xpath("//*[@href='https://www.instagram.com/techno.study/']"));
+        // Instagram.click();
 
-       // WebElement youtube=driver.findElement(By.xpath("//*[@href='https://www.youtube.com/c/TechnoStudyInc']"));
-       // youtube.click();
+        // WebElement youtube=driver.findElement(By.xpath("//*[@href='https://www.youtube.com/c/TechnoStudyInc']"));
+        // youtube.click();
 
         //WebElement linkedin=driver.findElement(By.xpath("//*[@href='https://www.linkedin.com/company/techno-study-inc/']"));
-       // linkedin.click();
+        // linkedin.click();
 
 
     }
@@ -179,6 +179,7 @@ public class TechnoStudy {
 
 
     }
+
 
 
 
