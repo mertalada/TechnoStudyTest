@@ -136,5 +136,16 @@ public class TechnoStudy {
 
 
     }
+    @Test
+    public void ErdemTest(){
+
+        driver.get("https://techno.study/tr/");
+
+        MyFunction.Wait(1);
+        WebElement kullanimSartlari= driver.findElement(By.cssSelector("#rec515963432 > div > div > div:nth-child(4) > div:nth-child(1) > div.t420__descr.t-descr.t-descr_xxs > ul > li:nth-child(1) > a"));
+        kullanimSartlari.click();
+
+
+    }
 
 }
