@@ -12,5 +12,8 @@ public class TechnoStudy {
     public void TechnoStudyTest() {
         driver.get("https://techno.study");
 
+        leadcodes.programs();
+        leadcodes.kurslar();
+
     }
 }
