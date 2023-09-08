@@ -2,6 +2,7 @@ import Utility.MyFunction;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -15,7 +16,6 @@ public class TechnoStudy {
 
         leadcodes.programs();
         leadcodes.kurslar();
-
 
 
     }
@@ -147,5 +147,40 @@ public class TechnoStudy {
 
 
     }
+    @Test
+    public void US_05(){ //Alt Menüden Sosyal Medya Hesaplarına Erişim Sağlayabilme
+        driver.get("https://techno.study/tr/sdet");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        MyFunction.Wait(2);
+
+        WebElement facebook=driver.findElement(By.xpath("//*[@href=\"https://www.facebook.com/technostudybootcamps\"]"));
+        facebook.click();
+
+       // WebElement Instagram=driver.findElement(By.xpath("//*[@href='https://www.instagram.com/techno.study/']"));
+       // Instagram.click();
+
+       // WebElement youtube=driver.findElement(By.xpath("//*[@href='https://www.youtube.com/c/TechnoStudyInc']"));
+       // youtube.click();
+
+        //WebElement linkedin=driver.findElement(By.xpath("//*[@href='https://www.linkedin.com/company/techno-study-inc/']"));
+       // linkedin.click();
+
+
+    }
+
+    @Test
+    public void US_06(){//Techno Study Logosuna Tıklayarak Anasayfaya Yönlendirilme
+
+        driver.get("https://techno.study/tr/sdet");
+
+        WebElement logo= driver.findElement(By.xpath("//*[@class='t228__imgwrapper']"));
+        logo.click();
+
+
+    }
+
+
+
 
 }
