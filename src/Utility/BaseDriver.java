@@ -21,6 +21,15 @@ import java.util.logging.Logger;
 public class BaseDriver {
     public static WebDriverWait wait;
     public static WebDriver driver;
+    static {
+        Logger logger = Logger.getLogger("");
+        logger.setLevel(Level.SEVERE);
+
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+    }
     public void loginTesti() {
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
         MyFunction.Wait(1);
